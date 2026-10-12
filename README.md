@@ -185,7 +185,3 @@ scripts/demo.sh            the scripted demo      tools/CoverageReport.java   Ja
 * The adaptive policy concentrates serial, low-concurrency traffic on the cheapest backend (it does not explore); under
   concurrent load the in-flight term spreads requests out.
 * Kernel telemetry reads `/proc/net/tcp`, so it is Linux only (`-telemetry none` elsewhere).
-
-## License
-
-MIT. See [`LICENSE`](LICENSE).
