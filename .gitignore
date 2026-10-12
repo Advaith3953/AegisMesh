@@ -1,0 +1,10 @@
+out/
+aegis-data/
+*.raft.json
+*.raft.json.tmp
+*.class
+.idea/
+.vscode/
+*.iml
+.DS_Store
+hs_err_pid*.log

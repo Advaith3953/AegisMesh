@@ -1,0 +1,15 @@
+name: CI
+on:
+  push: { branches: [main] }
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "21" }
+      - name: Tools (JUnit 5 and JaCoCo from the Ubuntu archive)
+        run: sudo apt-get update && sudo apt-get install -y junit5 libjacoco-java
+      - name: Everything (build, lint, unit + integration tests, coverage gate, process e2e, demo)
+        run: make check
